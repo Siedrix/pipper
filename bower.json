@@ -1,0 +1,13 @@
+{
+  "name": "pipe-context-plugin",
+  "version": "0.0.0",
+  "authors": [
+    "Siedrix <Siedrix@gmail.com>"
+  ],
+  "description": "Proof of concept to pass a backbone collection from the server to the browser.",
+  "license": "MIT",
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.1"
+  }
+}

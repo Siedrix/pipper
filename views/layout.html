@@ -9,6 +9,10 @@
 <body>
   	{% block content %}{% endblock %}
 
+  	<script type="text/javascript" src="/vendors/jquery/dist/jquery.js"></script>
+  	<script type="text/javascript" src="/vendors/underscore/underscore.js"></script>
+  	<script type="text/javascript" src="/vendors/backbone/backbone.js"></script>
+
   	<script type="text/javascript" src="/data-layer.js"></script>
 	{{ injectedData|hydrate }}
 </body>

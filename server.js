@@ -1,8 +1,12 @@
 var express = require('express'),
 	swig = require('swig'),
-	browserify = require('browserify');
+	browserify = require('browserify'),
+	literalify = require('literalify');
 
 var server = express();
+
+// Server bower files
+server.use( '/vendors', express.static(__dirname + '/bower_components') );
 
 // Swig config
 server.engine('html', swig.renderFile);
@@ -26,6 +30,7 @@ server.get('/data-layer.js', function (req, res) {
 	res.setHeader('Content-Type', 'text/javascript');
 
 	browserify()
+	.transform(literalify.configure({backbone: 'window.Backbone'}))
 	.require('./collections/items.js')
 	.bundle()
 	.pipe(res);

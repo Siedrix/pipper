@@ -1,0 +1,11 @@
+{
+  "name": "pipe-context-plugin",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "~4.7.2",
+    "stackers": "~0.1.5",
+    "swig": "~1.4.1",
+    "backbone": "~1.1.2",
+    "browserify": "~5.9.1"
+  }
+}
